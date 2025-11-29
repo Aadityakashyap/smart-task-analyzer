@@ -14,14 +14,13 @@ A full-stack app that stores tasks in MySQL Database and intelligently suggests 
 
 ### Backend (Django + MySQL)
 
-1. md smart-task-analyzer
+1. clone smart-task-analyzer repository
 2. cd smart-task-analyzer
-3. md backend
-4. cd backend
-5. python -m venv venv
-6. venv\Scripts\activate
-7. pip install -r requirements.txt
-8. Create `.env` in backend with:
+2. cd backend
+4. python -m venv venv
+5. venv\Scripts\activate
+6. pip install -r requirements.txt
+7. Create `.env` in backend with:
    ```env
    DJANGO_SECRET_KEY=your-dev-secret
    DB_NAME=taskdb
@@ -30,13 +29,13 @@ A full-stack app that stores tasks in MySQL Database and intelligently suggests 
    MYSQL_HOST=your-mysql-host
    MYSQL_PORT=your-mysql-port
    ```
-9. python manage.py migrate
-10. python manage.py runserver (starts at http://127.0.0.1:8000)
+8. python manage.py migrate
+9. python manage.py runserver (starts at http://127.0.0.1:8000)
 
 ### Frontend (React + Tailwind)
 
-1. md frontend
-2. cd smart-task-analyzer/frontend
+1. cd smart-task-analyzer
+2. cd frontend
 3. npm install
 4. npm run dev (starts at http://localhost:5173)
 
@@ -46,7 +45,7 @@ A full-stack app that stores tasks in MySQL Database and intelligently suggests 
 
 The priority scoring combines four factors to mirror practical decision-making:
 
-1. **Urgency**: We convert the `due_date` to a `date` object and compare it against today. If the task is overdue, we add a strong bonus (`+20`). If it’s upcoming, we compute days remaining and add up to `+10` for near-term deadlines (e.g., due within 0–10 days). This ensures looming work rises to the top.
+1. **Urgency**: We convert the due_date to a date object and compare it against today. If the task is overdue, we add a strong bonus (`+20`). If it’s upcoming, we compute days remaining and add up to `+10` for near-term deadlines (e.g., due within 0–10 days). This ensures looming work rises to the top.
 
 2. **Importance**: Importance is directly multiplied by 2, so higher-impact tasks sharply influence ranking. For example, importance 8 contributes `+16`, pushing critical work forward even if deadlines are not immediate.
 
