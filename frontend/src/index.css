@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #00f5d4;
+  --color-secondary: #0a0a0a;
+}
+
+.input-field {
+  @apply w-full p-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-primary;
+}
+
+button {
+  @apply font-semibold transition duration-200;
+}
+
+.heading {
+  @apply text-xl font-semibold mb-4;
+}

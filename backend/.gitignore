@@ -1,0 +1,37 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+
+# Django-specific files
+*.log
+*.pot
+db.sqlite3
+local_settings.py
+media/  # Or whatever your MEDIA_ROOT is
+static_collected/ # If you collect static files here
+
+# Virtual Environment
+.env
+venv/
+env/
+
+# IDE-specific files (e.g., PyCharm, VS Code)
+.idea/
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Test and Coverage
+.coverage
+.tox/
+.eggs/
+
+# Other temporary or generated files
+*~
+*.bak
+*.swp
